@@ -7,12 +7,8 @@
  */
 package model.command;
 
-import dto.ActionDTO;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 
 @Setter
 @Getter
@@ -22,10 +18,5 @@ public class RmCommand extends AbstractCommand {
     public RmCommand(String key) {
         super(CommandTypeEnum.RM);
         this.key = key;
-    }
-
-    @Override
-    public void execute(ActionDTO dto, ObjectOutputStream oos) throws IOException {
-
     }
 }

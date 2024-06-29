@@ -7,16 +7,6 @@
  */
 package model.command;
 
-import dto.ActionDTO;
-import dto.RespDTO;
-import dto.RespStatusTypeEnum;
-import service.Store;
-
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-
 public interface Command {
     String getKey();
-    void execute(ActionDTO dto, ObjectOutputStream oos) throws IOException;
 }
-

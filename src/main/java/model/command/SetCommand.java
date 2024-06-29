@@ -7,12 +7,8 @@
  */
 package model.command;
 
-import dto.ActionDTO;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 
 @Setter
 @Getter
@@ -25,10 +21,5 @@ public class SetCommand extends AbstractCommand {
         super(CommandTypeEnum.SET);
         this.key = key;
         this.value = value;
-    }
-
-    @Override
-    public void execute(ActionDTO dto, ObjectOutputStream oos) throws IOException {
-
     }
 }
