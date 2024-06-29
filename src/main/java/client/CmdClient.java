@@ -8,4 +8,6 @@
 package client;
 
 public class CmdClient{
+
+    // okoe
 }
