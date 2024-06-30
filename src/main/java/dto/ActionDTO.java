@@ -25,6 +25,16 @@ public class ActionDTO implements Serializable {
         this.value = value;
     }
 
+    /*
+    * 移除key
+    * */
+    public ActionDTO(ActionTypeEnum type, String key) {
+        this.type = type;
+        this.key = key;
+        this.value = value;
+    }
+
+
     @Override
     public String toString() {
         return "ActionDTO{" +

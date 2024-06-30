@@ -15,5 +15,10 @@ public enum CommandTypeEnum {
     /*
     * 删
     * */
-    RM
+    RM,
+
+    /*
+    * 查
+    * */
+    GET
 }
