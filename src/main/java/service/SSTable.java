@@ -38,7 +38,7 @@ public class SSTable {
         this.sortIndex = new ArrayList<>();
         this.lock = new Object();
         this.tableMetaInfo = new MetaInfo();
-        loadMetaInfo();
+//        loadMetaInfo();
     }
 
     // 保存稀疏索引区
@@ -74,16 +74,16 @@ public class SSTable {
         return sparseIndex;
     }
 
-    // 加载元数据
-    private void loadMetaInfo() throws IOException {
-        // 假设元数据位于文件的末尾固定位置
-        file.seek(file.length() - MetaInfo.SIZE);
-        byte[] metaBytes = new byte[MetaInfo.SIZE];
-        file.readFully(metaBytes);
-        ByteArrayInputStream bis = new ByteArrayInputStream(metaBytes);
-        ObjectInputStream ois = new ObjectInputStream(bis);
-        tableMetaInfo = (MetaInfo) ois.readObject();
-    }
+//    // 加载元数据
+//    private void loadMetaInfo() throws IOException {
+//        // 假设元数据位于文件的末尾固定位置
+//        file.seek(file.length() - MetaInfo.SIZE);
+//        byte[] metaBytes = new byte[MetaInfo.SIZE];
+//        file.readFully(metaBytes);
+//        ByteArrayInputStream bis = new ByteArrayInputStream(metaBytes);
+//        ObjectInputStream ois = new ObjectInputStream(bis);
+//        tableMetaInfo = (MetaInfo) ois.readObject();
+//    }
 
     // 写入数据并更新元数据
     public void put(String key, byte[] value) throws IOException {

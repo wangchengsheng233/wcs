@@ -38,18 +38,17 @@ public class SocketServerController implements Controller {
 
     @Override
     public void set(String key, String value) {
-        // 使用 'store' 实现设置操作
+
     }
 
     @Override
     public String get(String key) {
-        // 使用 'store' 实现获取操作
         return null;
     }
 
     @Override
     public void rm(String key) {
-        // 使用 'store' 实现删除操作
+
     }
 
     @Override

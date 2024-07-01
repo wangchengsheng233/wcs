@@ -23,12 +23,6 @@ public class SocketClient implements Client {
         this.port = port;
     }
 
-/*
-*
-* Socket socket = new Socket(host, port);：创建一个与服务器的连接，host 和 port 分别是服务器的地址和端口号。
-ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());：创建一个对象输出流，用于向服务器发送对象。
-ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());：创建一个对象输入流，用于从服务器接收对象。
-* */
     @Override
     public void set(String key, String value) {
         try (Socket socket = new Socket(host, port);
@@ -38,7 +32,6 @@ ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());：创建
             ActionDTO dto = new ActionDTO(ActionTypeEnum.SET, key, value);
             oos.writeObject(dto);
             oos.flush();
-            //返回响应数据
             RespDTO resp = (RespDTO) ois.readObject();
             System.out.println("resp data: "+ resp.toString());
             // 接收响应数据
@@ -80,6 +73,11 @@ ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());：创建
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void backup() {
+
     }
 
 }
