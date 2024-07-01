@@ -16,5 +16,12 @@ public enum RespStatusTypeEnum {
     /*
     * 失败
     * */
-    FAIL
+    FAIL,
+
+    // None 没有查找到
+    NONE ,
+
+    // Deleted 已经被删除
+    DELETED
+
 }

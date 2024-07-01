@@ -9,7 +9,25 @@ package service;
 
 import java.io.Closeable;
 
+
+// Closeable 自动释放资源
 public interface Store extends Closeable {
+
+    /*
+     * 增、改
+     * */
+
+    //SET
+
+    /*
+     * 删
+     * */
+
+   // RM,
+    /*
+     * 查
+     * */
+    //GET
     void set(String key, String value);
 
     String get(String key);

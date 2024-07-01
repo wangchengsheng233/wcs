@@ -17,9 +17,16 @@ public class SetCommand extends AbstractCommand {
 
     private String value;
 
+    /*
+    * 0 :未删除
+    * 1：已删除
+    * */
+    private  int deleted;
+
     public SetCommand(String key, String value) {
         super(CommandTypeEnum.SET);
         this.key = key;
         this.value = value;
+        this.deleted = 0;
     }
 }
